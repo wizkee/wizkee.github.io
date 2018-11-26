@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Git命令行基本操作 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="0. 安装Git网上有很多Git安装教程，如果需要图形界面，windows下建议使用TortoiseGit，linux建议使用Git GUI或者GITK。 1. Git基本配置git config可以配置git的参数，可以使用git config --list查看已经配置的git参数。其中有三个级别的保存位置，--system、--global、--local，分别表示所有用户（本系统）、当前用户">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git命令行基本操作">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/Git命令行基本操作/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="0. 安装Git网上有很多Git安装教程，如果需要图形界面，windows下建议使用TortoiseGit，linux建议使用Git GUI或者GITK。 1. Git基本配置git config可以配置git的参数，可以使用git config --list查看已经配置的git参数。其中有三个级别的保存位置，--system、--global、--local，分别表示所有用户（本系统）、当前用户">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-26T16:38:34.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Git命令行基本操作">
+<meta name="twitter:description" content="0. 安装Git网上有很多Git安装教程，如果需要图形界面，windows下建议使用TortoiseGit，linux建议使用Git GUI或者GITK。 1. Git基本配置git config可以配置git的参数，可以使用git config --list查看已经配置的git参数。其中有三个级别的保存位置，--system、--global、--local，分别表示所有用户（本系统）、当前用户">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,130 +154,211 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Git命令行基本操作" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Git命令行基本操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/27/Git命令行基本操作/" class="archive-article-date">
+
+        
+        <a href="/2018/11/27/Git命令行基本操作/" class="archive-article-date">
   	<time datetime="2018-11-26T16:37:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/27/Git命令行基本操作/">Git命令行基本操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="0-安装Git"><a href="#0-安装Git" class="headerlink" title="0. 安装Git"></a>0. 安装Git</h2><p>网上有很多Git安装教程，如果需要图形界面，windows下建议使用TortoiseGit，linux建议使用Git GUI或者GITK。</p>
+<h2 id="1-Git基本配置"><a href="#1-Git基本配置" class="headerlink" title="1. Git基本配置"></a>1. Git基本配置</h2><p>git config可以配置git的参数，可以使用<code>git config --list</code>查看已经配置的git参数。其中有三个级别的保存位置，<code>--system</code>、<code>--global</code>、<code>--local</code>，分别表示所有用户（本系统）、当前用户（全局）、本地配置（当前目录），默认使用<code>--local</code>。</p>
+<h3 id="配置用户名及邮箱"><a href="#配置用户名及邮箱" class="headerlink" title="配置用户名及邮箱"></a>配置用户名及邮箱</h3><p>在使用Git提交前，必须配置用户名和邮箱，这些信息会永久保存到历史记录中。</p>
+<pre><code>git config --global user.name &quot;Tocy&quot;
+git config --global user.email zyvj@qq.com
+</code></pre><h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><p>如果在windows下建议还是配置下默认文本编辑器<code>core.editor</code>和差异分析工具<code>merge.tool</code>。</p>
+<h2 id="2-创建Git仓库"><a href="#2-创建Git仓库" class="headerlink" title="2. 创建Git仓库"></a>2. 创建Git仓库</h2><p>可以直接调用<code>git init</code>初始化当前目录，即创建Git仓库。</p>
+<h2 id="3-获得Git仓库"><a href="#3-获得Git仓库" class="headerlink" title="3. 获得Git仓库"></a>3. 获得Git仓库</h2><p>如果需要克隆远程仓库，可以使用<code>git clone</code>，比如：</p>
+<pre><code>git clone https://git.oschina.net/Tocy/SampleCode.git
+</code></pre><h2 id="4-提交更新"><a href="#4-提交更新" class="headerlink" title="4. 提交更新"></a>4. 提交更新</h2><p>在windows下的Git GUI中，提交很简单，右键-TortoiseGit-Commit。那么命令行下需要怎么处理？<br>Git中每个文件都有三种状态：committed、staged、modified。它们之间关系如下：</p>
+<blockquote>
+<p>commit &lt;– stage <-- modify="" commit="" --=""> — –modify</--></p>
+</blockquote>
+<p>我们获取的Git仓库中的所有文件都是committed状态，如果你在本地修改了文件a，a的状态就变成modified的；如果使用<code>git add a</code>，a的状态变成staged；如果使用<code>git commit</code>，a的状态就变成commited。这种状态变化也说明复制代码是很方便的，但是提交更新请慎重。<br>当然还有一种文件状态，未跟踪状态（unversioned/untracked），通过使用<code>git add</code>可以把未跟踪状态变更为staged；通过<code>git rm</code>可以将staged或者committed状态变为未跟踪状态。</p>
+<h3 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h3><p>通常提交前先检查下修改了什么内容，当前Git目录下各文件的状态。</p>
+<pre><code>$ git status
+On branch master
 
-        <div class="article-info info-on-right">
-          
-          
+Initial commit
 
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        Readme.md
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p>git add可以添加文件或者目录，也可以使用通配符。比如：</p>
+<pre><code>git add Readme.md    # add file only
+git add *.cpp        # add all cpp files
+git add /home/code/  # add all files in /home/code
+</code></pre><h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><p>git diff可以查看当前目录的所有修改。<br>提交之前，还是单独确认下处于staged状态的文件有哪些，并保证修改正确。在实际应用中，可能还需要使用<code>git diff</code>导出PATCH做代码走读。<br>可以使用<code>git diff --staged</code>或<code>git diff --cached</code>查看staged与上次提交快照之间的区别。</p>
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>提交前需慎重。直接调用<code>git commit</code>会弹出编辑器，输入提交日志（如果是多行日志，建议使用）。<br>针对单行日志提交的情况，可以使用如下命令：<code>git commit -m &quot;add readme&quot;</code>。<br>还有一种快捷的提交方式，直接跳过stage缓存区，直接提交当前目录下的所有修改<code>git commit -a</code>（使用这个命令前建议确认下当前目录的修改是否正确、必须）。</p>
+<h3 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h3><p>git rm会把文件从当前目录删除（不会保存删除的文件）。如果需要从Git仓库中删除，但保留在当前工作目录中，亦即从跟踪清单中删除，可以使用<code>git rm --cached readme.md</code>。</p>
+<h2 id="5-提交历史查看"><a href="#5-提交历史查看" class="headerlink" title="5. 提交历史查看"></a>5. 提交历史查看</h2><p>可以使用<code>git log</code>查看当前工程的所有提交的日志。</p>
+<pre><code>git log --stat      # 仅显示摘要选项
+git log --pretty=oneline        # 定制记录格式
+git log --graph     # 图像化分支和版本更新
+</code></pre><h2 id="6-撤销更新"><a href="#6-撤销更新" class="headerlink" title="6. 撤销更新"></a>6. 撤销更新</h2><h2 id="7-远程仓库"><a href="#7-远程仓库" class="headerlink" title="7. 远程仓库"></a>7. 远程仓库</h2><p>可以使用<code>git remote</code>查看当前的远程库。<br><code>git remote -v</code>可以显示对应的克隆地址。（对于多个远程仓库很有用）</p>
+<h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p><code>git remote add [short_name] [url]</code>可以添加新的远程仓库。</p>
+<h3 id="从远程仓库抓取数据"><a href="#从远程仓库抓取数据" class="headerlink" title="从远程仓库抓取数据"></a>从远程仓库抓取数据</h3><p><code>git fetch [remote-name]</code>可以从远程仓库抓取数据到本地。<br>也可以使用<code>git pull</code></p>
+<h3 id="推送数据到远程仓库"><a href="#推送数据到远程仓库" class="headerlink" title="推送数据到远程仓库"></a>推送数据到远程仓库</h3><p><code>git push [remote_name] [branch_name]</code><br>默认使用origin和master。</p>
+<h3 id="查看远程仓库信息"><a href="#查看远程仓库信息" class="headerlink" title="查看远程仓库信息"></a>查看远程仓库信息</h3><p><code>git remote show origin</code></p>
+<h3 id="远程仓库的删除和重命名"><a href="#远程仓库的删除和重命名" class="headerlink" title="远程仓库的删除和重命名"></a>远程仓库的删除和重命名</h3><p><code>git remote rename [old_name] [new_name]</code><br><code>git remote rm [remote_name]</code></p>
+<h2 id="8-打Tags"><a href="#8-打Tags" class="headerlink" title="8. 打Tags"></a>8. 打Tags</h2><p>可使用<code>git tag</code>显示当前库中的标签。</p>
+<h3 id="添加标签（含附注）"><a href="#添加标签（含附注）" class="headerlink" title="添加标签（含附注）"></a>添加标签（含附注）</h3><p><code>git tag -a v0.1 -m &quot;my version 0.1&quot;</code><br>使用如下命令查看Tag日志信息（指定对应标签的名字）<br><code>git show v0.1</code><br>也可使用SHA-1的提交表示创建tag：<br><code>git tag -a v0.2 [SHA-1] -m &quot;my version 0.2&quot;</code></p>
+<h3 id="分享标签"><a href="#分享标签" class="headerlink" title="分享标签"></a>分享标签</h3><p>默认的，git push不会推送标签信息到远程仓库，需要通过命令显式推送。<br><code>git push origin v0.1</code><br>如果需要推送所有标签，使用<br><code>git push origin --tags</code></p>
+<h2 id="9-Git分支"><a href="#9-Git分支" class="headerlink" title="9. Git分支"></a>9. Git分支</h2><p>git分支是轻量级的，速度很快，仅记录索引信息。</p>
+<h3 id="显示所有分支"><a href="#显示所有分支" class="headerlink" title="显示所有分支"></a>显示所有分支</h3><p>使用<code>git branch</code>可显示当前所有分支。<br>可以使用–merged和–no-merged查看已经合并、未合并的分支。</p>
+<h3 id="创建及切换分支"><a href="#创建及切换分支" class="headerlink" title="创建及切换分支"></a>创建及切换分支</h3><p>可以使用下面命令直接切换并创建分支<br><code>git checkout -b testing</code><br>等价于</p>
+<pre><code>$ git branch testing    # 创建testing 分支
+$ git checkout testing  # 切换到testing分支
+</code></pre><p>注意切换分支时请保持工作目录没有未提交的修改。Git鼓励使用分支，处理完问题之后合并分支即可。</p>
+<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>将hotfix分支合并到master（主分支）上，需要通过下面命令：</p>
+<pre><code>$ git checkout master
+$ git merge hotfix
+</code></pre><p>合并之后可以使用<code>git branch -d hotfix</code>删除分支。<br>如果合并时存在冲突，需要手工修改。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/27/Git命令行基本操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/27/个人简历/" class="archive-article-date">
-  	<time datetime="2018-11-26T16:37:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/27/个人简历/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">个人简历</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/27/个人简历/">个人简历</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/26/Hello-Blog/" class="archive-article-date">
-  	<time datetime="2018-11-26T13:20:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/26/Hello-Blog/">Hello Blog</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/26/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-26T12:56:51.949Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/26/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -296,8 +381,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
